@@ -1,0 +1,2 @@
+GET /transactions   controllers.TransactionController.getAll()
+POST /transactions   controllers.TransactionController.addNewTransaction()
