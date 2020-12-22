@@ -1,2 +1,2 @@
-GET /transactions   controllers.BillController.getAll()
-POST /transactions   controllers.BillController.addBill()
+GET /bills   bills.BillController.getAll()
+POST /bills   bills.BillController.addBill()

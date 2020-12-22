@@ -1,4 +1,4 @@
-package controllers
+package bills
 
 import models.Bill
 import slick.jdbc.PostgresProfile.api._
