@@ -15,7 +15,6 @@ class BillRepository () extends BillRepo {
   }
 
   override def add(bill: Bill): Future[Int] = db.run(bills returning bills.map(_.id) += bill)
-
 }
 
 object BillsTable {

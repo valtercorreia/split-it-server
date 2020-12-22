@@ -28,7 +28,7 @@ extends BaseController {
 
     transaction match {
       case Some(newItem) =>
-        val toBeAdded = Bill(1, newItem.amount, newItem.category, newItem.comment, 1)
+        val toBeAdded = Bill(1, newItem.amount, newItem.category, newItem.comment, newItem.groupId)
         billRepo.add(toBeAdded).map(a => Created(Json.toJson(toBeAdded)))
       case None =>
         Future(BadRequest)
