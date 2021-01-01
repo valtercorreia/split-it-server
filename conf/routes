@@ -1,2 +1,4 @@
 GET /bills   bills.BillController.getAll()
 POST /bills   bills.BillController.addBill()
+
+POST /authenticate   authentication.AuthController.authenticate()

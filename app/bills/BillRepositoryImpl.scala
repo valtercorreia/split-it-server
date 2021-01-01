@@ -5,7 +5,7 @@ import slick.jdbc.PostgresProfile.api._
 
 import scala.concurrent.Future
 
-class BillRepository () extends BillRepo {
+class BillRepositoryImpl () extends BillRepo {
   val db = Database.forConfig("postgres")
 
   val bills = BillsTable.bills;
