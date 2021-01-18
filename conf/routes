@@ -2,3 +2,7 @@ GET /bills   bills.BillController.getAll()
 POST /bills   bills.BillController.addBill()
 
 POST /authenticate   authentication.AuthController.authenticate()
+
+GET /tabs tabs.TabsController.getAll()
+#GET /tabs/:id tabs.TabsController.getById(id: Int)
+POST /tabs tabs.TabsController.createTab()

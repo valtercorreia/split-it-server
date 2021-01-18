@@ -1,6 +1,7 @@
 import bills.{BillRepo, BillRepositoryImpl}
 import com.google.inject.AbstractModule
 import play.api.{Configuration, Environment}
+import tabs.{TabsRepo, TabsRepoImpl}
 import users.{UsersRepo, UsersRepoImpl}
 
 class GuiceModule(environment: Environment, configuration: Configuration)
@@ -9,5 +10,6 @@ class GuiceModule(environment: Environment, configuration: Configuration)
   override def configure() = {
     bind(classOf[BillRepo]).to(classOf[BillRepositoryImpl])
     bind(classOf[UsersRepo]).to(classOf[UsersRepoImpl])
+    bind(classOf[TabsRepo]).to(classOf[TabsRepoImpl])
   }
 }
