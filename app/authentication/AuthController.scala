@@ -25,7 +25,7 @@ class AuthController @Inject()(val controllerComponents: ControllerComponents, v
           .map {
             case Some(user) => {
               if (passwordsMatch(authBody.password, user.passHash)) {
-                Ok.withSession("username" -> user.firstName)
+                Ok.withSession("uId" -> user.id.toString)
               } else {
                 Unauthorized
               }
