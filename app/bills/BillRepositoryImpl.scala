@@ -10,8 +10,8 @@ class BillRepositoryImpl () extends BillRepo {
 
   val bills = BillsTable.bills;
 
-  override def get(): Future[Seq[Bill]] = {
-    db.run(bills.result)
+  override def getWithTabId(tabId: Long): Future[Seq[Bill]] = {
+    db.run(bills.filter(_.tabId === tabId.toInt).result)
   }
 
   override def add(bill: Bill): Future[Int] = db.run(bills returning bills.map(_.id) += bill)
@@ -25,7 +25,7 @@ object BillsTable {
 
     def fromId = column[Int]("fromid")
 
-    def amount = column[Int]("amount")
+    def amount = column[BigDecimal]("amount")
 
     def description = column[String]("description")
 

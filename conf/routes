@@ -1,8 +1,10 @@
-GET /bills   bills.BillController.getAll()
-POST /bills   bills.BillController.addBill()
-
 POST /authenticate   authentication.AuthController.authenticate()
 
+GET /tabs/:tabId tabs.TabsController.getTab(tabId: Long)
+
+GET /tabs/:tabId/bills bills.BillController.getBills(tabId: Long)
+POST /tabs/:tabId/bills bills.BillController.postBill(tabId: Long)
+
 GET /tabs tabs.TabsController.getAll()
-#GET /tabs/:id tabs.TabsController.getById(id: Int)
-POST /tabs tabs.TabsController.createTab()
+POST /tabs tabs.TabsController.postTab()
+

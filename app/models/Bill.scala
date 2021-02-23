@@ -1,3 +1,3 @@
 package models
 
-case class Bill(fromId: Int, amount: Int, category: String, comment: String, groupId: Int, id: Int = 0)
+case class Bill(fromId: Int, amount: BigDecimal, category: String, comment: String, tabId: Int, id: Int = 0)
